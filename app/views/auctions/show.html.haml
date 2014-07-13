@@ -1,0 +1,26 @@
+.well
+  %h3= @auction.title
+  %p= @auction.details
+  %p
+    Reserve Price: "#{@auction.reserve_price}"
+
+  Current Price: "#{@auction.bids.order("price DESC").first.price + 1}"
+
+  %br
+  %br
+  =form_for [@auction, @bid], remote:true do |f|
+    =f.text_field :price
+    =f.submit "Bid", class: "btn btn-info btn-sm"
+  %br
+  %br
+
+  Previous Bids
+  
+  %br
+  %br
+
+  .bids
+    -@auction.bids.each do |bid|
+      =render partial: "/bids/bid", locals: {auction: @auction, bid: bid}
+  
+

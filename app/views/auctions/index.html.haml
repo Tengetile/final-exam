@@ -1,0 +1,14 @@
+%h1 Auctions
+
+=link_to "Create An Auction", new_auction_path, class: "btn btn-primary" 
+%br 
+%br
+
+-@auctions.each do |auction|
+  .well
+    %h2= link_to auction.title, auction
+    %p=  auction.details
+    %p=  auction.reserve_price
+    %p=  auction.ends_on
+
+  

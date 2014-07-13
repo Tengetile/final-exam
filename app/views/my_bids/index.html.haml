@@ -1,0 +1,6 @@
+%h1 Auctions I have Bidded on
+
+- @bids.each do |bid|
+  .well
+    %h2= link_to bid.title, bid
+    %p= bid.price

@@ -1,0 +1,7 @@
+/ $("##{dom_id(@discussion)} .comments").prepend("#{j render partial: '/comments/comment', locals: {discussion: @discussion, comment: @comment}}")
+
+/ $("##{dom_id(@discussion)} #comment_body").val("");
+
+$(".bids").prepend("#{j render partial: '/bids/bid', locals: {auction: @auction, bid: @bid}}").fadeIn(2000)
+
+$("#bid_price").val("");

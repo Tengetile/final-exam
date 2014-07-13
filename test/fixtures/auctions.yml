@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  details: MyText
+  ends_on: 2014-07-11 17:28:51
+  reserve_price: 1
+
+two:
+  title: MyString
+  details: MyText
+  ends_on: 2014-07-11 17:28:51
+  reserve_price: 1
